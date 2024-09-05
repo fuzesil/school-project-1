@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>EISA Audit JS</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<h1>EISA Internal-Admin js</h1>
+
+	<div id="formdiv">
+		<h4>Expert groups</h4>
+		<button type="button" onclick="getExpertgroups()">Refresh Expert group Table</button>
+		<input type="text" id="expertgroupname" placeholder="Expert group Name" />
+		<button type="button" onclick="postExpertgroup()">Add Expert group</button>
+		<button type="button" onclick="getSingleExpertgroup()">Get one Expert group by name</button>
+	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody id="expertgrouparea">
+		</tbody>
+	</table>
+
+	<div id="formdiv">
+		<h4>Countries</h4>
+		<button type="button" onclick="getCountries()">Refresh Country Table</button>
+		<input type="text" id="countryname" placeholder="Country Name" />
+		<button type="button" onclick="postCountry()">Add Country</button>
+		<button type="button" onclick="getSingleCountry()">Get one Country by name</button>
+	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Capital City</th>
+				<th>Calling Code</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody id="countryarea">
+		</tbody>
+	</table>
+
+	<div id="formdiv">
+		<h4>Members</h4>
+		<button type="button" onclick="getMembers()">Refresh Members Table</button>
+		<input type="text" id="membername" placeholder="Member Name" />
+		<button type="button" onclick="postMember()">Add Member</button>
+		<button type="button" onclick="getSingleMember()">Get one Member by name</button>
+	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Website</th>
+				<th>Publisher</th>
+				<th>Phone Number</th>
+				<th>Office Location</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody id="memberarea">
+		</tbody>
+	</table>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
