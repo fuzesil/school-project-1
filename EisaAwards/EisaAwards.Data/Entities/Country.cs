@@ -1,7 +1,7 @@
 ﻿namespace EisaAwards.Data
 {
     /// <summary>
-    /// The entity class representing the Country table.
+    /// The entity class representing the COUNTRIES table.
     /// </summary>
     public class Country
     {
@@ -17,7 +17,7 @@
         /// <summary>
         /// Gets or Sets the primary key for the Country table.
         /// </summary>
-        public int CountryID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or Sets the Name field for the Country table.
@@ -52,31 +52,24 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is Country other)
-            {
-                return this.CountryID == other.CountryID
-                    && this.CallingCode == other.CallingCode
-                    && this.PPPperCapita == other.PPPperCapita
-                    && ((this.Name is null && other.Name is null) || this.Name == other.Name)
-                    && ((this.CapitalCity is null && other.CapitalCity is null) || this.CapitalCity == other.CapitalCity);
-            }
-
-            return false;
+            return obj is Country other
+                && this.Id == other.Id
+                && this.CallingCode == other.CallingCode
+                && this.PPPperCapita == other.PPPperCapita
+                && ((this.Name is null && other.Name is null) || this.Name == other.Name)
+                && ((this.CapitalCity is null && other.CapitalCity is null) || this.CapitalCity == other.CapitalCity);
         }
 
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return this.CountryID;
+            return this.Id;
         }
 
-        /// <summary>
-        /// Returns a custom string of the properties of the current <see cref="Country"/> object.
-        /// </summary>
-        /// <returns>The custom string that represents the current object.</returns>
+        /// <inheritdoc/>
         public override string ToString()
         {
-            return $"( #{this.CountryID} " + (this.Name ?? $"NO {nameof(this.Name)}!") + " | "
+            return $"( #{this.Id} " + (this.Name ?? $"NO {nameof(this.Name)}!") + " | "
                 + (this.CapitalCity ?? $"NO {nameof(this.CapitalCity)}!") + $" | {this.CallingCode} | "
                 + this.PPPperCapita.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) + " )";
         }

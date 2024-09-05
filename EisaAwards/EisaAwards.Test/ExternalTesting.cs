@@ -78,14 +78,14 @@
         public void TestGetOneBrandReturnsValidOrNull(int id, string name)
         {
             this.brandRepo.Setup(repo => repo.GetOne(id))
-                .Returns<int>(idArg => this.brandList.SingleOrDefault(brand => brand.BrandId == idArg));
+                .Returns<int>(idArg => this.brandList.SingleOrDefault(brand => brand.Id == idArg));
             this.brandRepo.Setup(repo => repo.GetOne(name))
                 .Returns<string>(nameArg => this.brandList.FirstOrDefault(brand => brand.Name == nameArg));
 
             Brand resultBrandById = this.externalLogic.GetOneBrand(id);
             Brand resultBrandByName = this.externalLogic.GetOneBrand(It.Is<int>(num => num < 1), name);
 
-            Assert.AreEqual(resultBrandById, this.brandList.SingleOrDefault(brand => brand.BrandId == id));
+            Assert.AreEqual(resultBrandById, this.brandList.SingleOrDefault(brand => brand.Id == id));
             Assert.AreEqual(resultBrandByName, this.brandList.FirstOrDefault(brandItem => brandItem.Name == name));
             Assert.AreEqual(resultBrandById, resultBrandByName);
             this.brandRepo.Verify(repo => repo.GetOne(id), Times.Once);
@@ -106,14 +106,14 @@
         public void TestGetOneExpertgroupReturnsValidOrNull(int id, string name)
         {
             this.egRepo.Setup(repo => repo.GetOne(id))
-                .Returns<int>(idArg => this.egList.SingleOrDefault(eg => eg.ExpertGroupID == idArg));
+                .Returns<int>(idArg => this.egList.SingleOrDefault(eg => eg.Id == idArg));
             this.egRepo.Setup(repo => repo.GetOne(name))
                 .Returns<string>(nameArg => this.egList.FirstOrDefault(eg => eg.Name == nameArg));
 
             ExpertGroup resultEGById = this.externalLogic.GetOneExpertGroup(id);
             ExpertGroup resultEGByName = this.externalLogic.GetOneExpertGroup(It.Is<int>(num => num < 1), name);
 
-            Assert.AreEqual(resultEGById, this.egList.SingleOrDefault(eg => eg.ExpertGroupID == id));
+            Assert.AreEqual(resultEGById, this.egList.SingleOrDefault(eg => eg.Id == id));
             Assert.AreEqual(resultEGByName, this.egList.FirstOrDefault(eg => eg.Name == name));
             Assert.AreEqual(resultEGById, resultEGByName);
             this.egRepo.Verify(repo => repo.GetOne(id), Times.Once);
@@ -134,14 +134,14 @@
         public void TestGetOneProductReturnsValidOrNull(int id, string name)
         {
             this.productRepo.Setup(repo => repo.GetOne(id))
-                .Returns<int>(idArg => this.productList.SingleOrDefault(prod => prod.ProductID == idArg));
+                .Returns<int>(idArg => this.productList.SingleOrDefault(prod => prod.Id == idArg));
             this.productRepo.Setup(repo => repo.GetOne(name))
                 .Returns<string>(nameArg => this.productList.FirstOrDefault(prod => prod.Name == nameArg));
 
             Product resultProductById = this.externalLogic.GetOneProduct(id);
             Product resultProductByName = this.externalLogic.GetOneProduct(It.Is<int>(num => num < 1), name);
 
-            Assert.AreEqual(resultProductById, this.productList.SingleOrDefault(prod => prod.ProductID == id));
+            Assert.AreEqual(resultProductById, this.productList.SingleOrDefault(prod => prod.Id == id));
             Assert.AreEqual(resultProductByName, this.productList.FirstOrDefault(prod => prod.Name == name));
             Assert.AreEqual(resultProductById, resultProductByName);
             this.productRepo.Verify(repo => repo.GetOne(id), Times.Once);

@@ -1,14 +1,21 @@
 ﻿namespace EisaAwards.Data
 {
     /// <summary>
-    /// Entity class representing the Products table.
+    /// Entity class representing the PRODUCTS table.
     /// </summary>
     public class Product
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="Product"/> class.
+        /// </summary>
+        public Product()
+        {
+        }
+
+        /// <summary>
         /// Gets or Sets the primary key for the <see cref="Product"/> entity.
         /// </summary>
-        public int ProductID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or Sets the name field for the <see cref="Product"/> entity.
@@ -58,33 +65,26 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is Product other)
-            {
-                return this.ProductID == other.ProductID
-                    && this.BrandId == other.BrandId
-                    && this.ExpertGroupID == other.ExpertGroupID
-                    && this.Price == other.Price
-                    && this.EstimatedLifetime == other.EstimatedLifetime
-                    && this.LaunchDate == other.LaunchDate
-                    && ((this.Name is null && other.Name is null) || this.Name == other.Name);
-            }
-
-            return false;
+            return obj is Product other
+                && this.Id == other.Id
+                && this.BrandId == other.BrandId
+                && this.ExpertGroupID == other.ExpertGroupID
+                && this.Price == other.Price
+                && this.EstimatedLifetime == other.EstimatedLifetime
+                && this.LaunchDate == other.LaunchDate
+                && ((this.Name is null && other.Name is null) || this.Name == other.Name);
         }
 
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return this.ProductID;
+            return this.Id;
         }
 
-        /// <summary>
-        /// Returns a custom string of the properties of the current <see cref="Product"/> object.
-        /// </summary>
-        /// <returns>The custom string that represents the current object.</returns>
+        /// <inheritdoc/>
         public override string ToString()
         {
-            return $"( #{this.ProductID} "
+            return $"( #{this.Id} "
                 + (this.Brand?.Name?.ToUpperInvariant() ?? $" Brand #{this.BrandId}") + " - "
                 + (this.Name ?? $"NO {nameof(this.Name)}!") + " | "
                 + (this.ExpertGroup?.Name ?? $"EG: #{this.ExpertGroupID}") + " | "

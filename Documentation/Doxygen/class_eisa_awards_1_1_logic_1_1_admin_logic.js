@@ -1,6 +1,7 @@
 var class_eisa_awards_1_1_logic_1_1_admin_logic =
 [
     [ "AdminLogic", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#aef65658b1a307f2ea2c1217a17992d8c", null ],
+    [ "AdminLogic", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#af0d092b50ccafc20ab15adf7f1dd0dad", null ],
     [ "ChangeBrandHomePage", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#aa8ee5f655a284c8ba1eb7afcbc315d5a", null ],
     [ "ChangeCountryPPP", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a04ccb0e26713881c1f309915f3e5f64b", null ],
     [ "ChangeEGName", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a3e50bce6edf74b740a9d241a5a7887c1", null ],

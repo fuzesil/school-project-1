@@ -1,6 +1,7 @@
 var class_eisa_awards_1_1_logic_1_1_external_logic =
 [
     [ "ExternalLogic", "class_eisa_awards_1_1_logic_1_1_external_logic.html#aca5add840dc86d6b0f6578db0a3b755e", null ],
+    [ "ExternalLogic", "class_eisa_awards_1_1_logic_1_1_external_logic.html#abe4c649f375842d1c9a17262761edd4d", null ],
     [ "GetMaxPriceProdInEveryEG", "class_eisa_awards_1_1_logic_1_1_external_logic.html#adbcc9a5273adc575ad9e20413c9474e5", null ],
     [ "GetMaxPriceProdInEveryEGAsync", "class_eisa_awards_1_1_logic_1_1_external_logic.html#a66750ef7747876fd5d13cafa6e50a19c", null ],
     [ "GetOneBrand", "class_eisa_awards_1_1_logic_1_1_external_logic.html#aa391ed6e6f551f05be1773c113b161fe", null ],

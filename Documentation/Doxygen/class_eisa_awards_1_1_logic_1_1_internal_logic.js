@@ -1,6 +1,7 @@
 var class_eisa_awards_1_1_logic_1_1_internal_logic =
 [
     [ "InternalLogic", "class_eisa_awards_1_1_logic_1_1_internal_logic.html#af14dfb6407330473ebb51c0d4b8b35f9", null ],
+    [ "InternalLogic", "class_eisa_awards_1_1_logic_1_1_internal_logic.html#a283637ee4234c7599a2e5a3057ca3691", null ],
     [ "CountMembersInCountry", "class_eisa_awards_1_1_logic_1_1_internal_logic.html#a851de603236e0f8dffd1063cd49433ed", null ],
     [ "GetAveragePPP", "class_eisa_awards_1_1_logic_1_1_internal_logic.html#a559ee47c5f3b759d7b7ababe7149b311", null ],
     [ "GetOneCountry", "class_eisa_awards_1_1_logic_1_1_internal_logic.html#afe09c2339f43c85f1e6859d6ac6823ea", null ],

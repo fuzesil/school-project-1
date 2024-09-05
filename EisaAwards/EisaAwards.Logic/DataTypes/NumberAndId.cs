@@ -19,13 +19,9 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is NumberAndId other)
-            {
-                return this.Id == other.Id
-                    && this.Number == other.Number;
-            }
-
-            return false;
+            return obj is NumberAndId other
+                && this.Id == other.Id
+                && this.Number == other.Number;
         }
 
         /// <inheritdoc/>

@@ -11,21 +11,21 @@
     public abstract class RepositoryClass<T> : IRepository<T>
         where T : class
     {
-        private readonly DbContext db;
+        private readonly DbContext dbContext;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RepositoryClass{T}"/> class.
         /// </summary>
-        /// <param name="db">A <see cref="DbContext"/> type instance.</param>
-        protected RepositoryClass(DbContext db)
+        /// <param name="dbContext">The instance of type <see cref="DbContext"/> that represents the connection to the database.</param>
+        protected RepositoryClass(ref DbContext dbContext)
         {
-            this.db = db ?? throw new System.ArgumentNullException(nameof(db));
+            this.dbContext = dbContext ?? throw new System.ArgumentNullException(nameof(dbContext));
         }
 
         /// <inheritdoc/>
         public IQueryable<T> GetAll()
         {
-            return this.db.Set<T>();
+            return this.dbContext.Set<T>();
         }
 
         /// <inheritdoc/>
@@ -37,15 +37,15 @@
         /// <inheritdoc/>
         public void Insert(T entity)
         {
-            this.db.Set<T>().Add(entity);
-            this.db.SaveChanges();
+            this.dbContext.Set<T>().Add(entity);
+            this.dbContext.SaveChanges();
         }
 
         /// <inheritdoc/>
         public void Remove(T entity)
         {
-            this.db.Set<T>().Remove(entity);
-            this.db.SaveChanges();
+            this.dbContext.Set<T>().Remove(entity);
+            this.dbContext.SaveChanges();
         }
 
         /// <inheritdoc/>
@@ -54,8 +54,8 @@
         /// <inheritdoc/>
         public void Update(T entity)
         {
-            this.db.Set<T>().Update(entity);
-            this.db.SaveChanges();
+            this.dbContext.Set<T>().Update(entity);
+            this.dbContext.SaveChanges();
         }
     }
 }

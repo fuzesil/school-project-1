@@ -36,8 +36,10 @@ var hierarchy =
     [ "EisaAwards.Logic.IReadInternalData", "interface_eisa_awards_1_1_logic_1_1_i_read_internal_data.html", [
       [ "EisaAwards.Logic.InternalLogic", "class_eisa_awards_1_1_logic_1_1_internal_logic.html", null ]
     ] ],
-    [ "EisaAwards.Repository.IRepository", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-      [ "EisaAwards.Repository.IRepository< T >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", null ]
+    [ "IRepository", null, [
+      [ "EisaAwards.Repository.IRepository< T >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
+        [ "EisaAwards.Repository.RepositoryClass< T >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", null ]
+      ] ]
     ] ],
     [ "EisaAwards.Repository.IRepository< Data.Brand >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
       [ "EisaAwards.Repository.IBrandRepository", "interface_eisa_awards_1_1_repository_1_1_i_brand_repository.html", [
@@ -63,9 +65,6 @@ var hierarchy =
       [ "EisaAwards.Repository.IProductRepository", "interface_eisa_awards_1_1_repository_1_1_i_product_repository.html", [
         [ "EisaAwards.Repository.ProductRepository", "class_eisa_awards_1_1_repository_1_1_product_repository.html", null ]
       ] ]
-    ] ],
-    [ "EisaAwards.Repository.IRepository< T >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-      [ "EisaAwards.Repository.RepositoryClass< T >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", null ]
     ] ],
     [ "EisaAwards.Data.Member", "class_eisa_awards_1_1_data_1_1_member.html", null ],
     [ "EisaAwards.Logic.MemberBrand", "class_eisa_awards_1_1_logic_1_1_member_brand.html", null ],

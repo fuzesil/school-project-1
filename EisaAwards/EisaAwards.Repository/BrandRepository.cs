@@ -9,16 +9,16 @@
     /// </summary>
     public class BrandRepository : RepositoryClass<Brand>, IBrandRepository
     {
-        private readonly DbContext db;
+        // private readonly DbContext dbContext;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandRepository"/> class.
         /// </summary>
-        /// <param name="db">The <see cref="DbContext"/> parametre.</param>
-        public BrandRepository(DbContext db)
-            : base(db)
+        /// <param name="dbContext">The instance of type <see cref="DbContext"/> that represents the connection to the database.</param>
+        public BrandRepository(ref DbContext dbContext)
+            : base(ref dbContext)
         {
-            this.db = db ?? throw new System.ArgumentNullException(nameof(db));
+            // this.dbContext = dbContext ?? throw new System.ArgumentNullException(nameof(dbContext));
         }
 
         /// <inheritdoc/>
@@ -49,13 +49,13 @@
         /// <inheritdoc/>
         public override Brand GetOne(int id)
         {
-            return this.GetAll().Single(brand => brand.BrandId == id);
+            return this.GetAll().Single(brand => brand.Id == id);
         }
 
         /// <inheritdoc/>
         public override Brand GetOne(string name)
         {
-            return this.GetAll().Where(brand => brand.Name == name).First();
+            return this.GetAll().First(brand => brand.Name.Contains(name));
         }
 
         /// <inheritdoc/>

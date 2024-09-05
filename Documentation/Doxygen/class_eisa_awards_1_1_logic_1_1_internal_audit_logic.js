@@ -1,6 +1,7 @@
 var class_eisa_awards_1_1_logic_1_1_internal_audit_logic =
 [
     [ "InternalAuditLogic", "class_eisa_awards_1_1_logic_1_1_internal_audit_logic.html#a6400a5f5ba5b9566a4d2a246b0471046", null ],
+    [ "InternalAuditLogic", "class_eisa_awards_1_1_logic_1_1_internal_audit_logic.html#a1f38c2983c9b0aa3f5de874637e812a0", null ],
     [ "CountMembersInCountry", "class_eisa_awards_1_1_logic_1_1_internal_audit_logic.html#a2973bf2ea4a79a6c85a9613990509264", null ],
     [ "GetRichestMemberInExpertGroup", "class_eisa_awards_1_1_logic_1_1_internal_audit_logic.html#ab94a3e33d230ab0f50f42aaa178c4772", null ],
     [ "GetRichestMemberInExpertGroupAsync", "class_eisa_awards_1_1_logic_1_1_internal_audit_logic.html#a137384f7c7f6385a4930f25101461f32", null ],

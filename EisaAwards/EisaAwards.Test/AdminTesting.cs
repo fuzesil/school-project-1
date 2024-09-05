@@ -55,9 +55,9 @@ namespace EisaAwards.Test
         [Test]
         public void TestInsertExpertGroup()
         {
-            int random = DataSource.Rnd.Next(this.egList.Max(eg => eg.ExpertGroupID) + 1, int.MaxValue);
-            ExpertGroup eg = new ExpertGroup { ExpertGroupID = random, Name = "Developers", };
-            this.egRepo.Setup(repo => repo.Insert(It.IsAny<ExpertGroup>())).Callback<ExpertGroup>(newEG => this.egList.Add(new ExpertGroup { Name = newEG.Name, ExpertGroupID = random }));
+            int random = DataSource.Rnd.Next(this.egList.Max(eg => eg.Id) + 1, int.MaxValue);
+            ExpertGroup eg = new () { Id = random, Name = "Developers", };
+            this.egRepo.Setup(repo => repo.Insert(It.IsAny<ExpertGroup>())).Callback<ExpertGroup>(newEG => this.egList.Add(new ExpertGroup { Name = newEG.Name, Id = random }));
 
             this.adminLogic.InsertEG(eg.Name);
 
@@ -75,13 +75,13 @@ namespace EisaAwards.Test
         {
             this.productRepo.Setup(repo => repo.GetAll()).Returns(this.productList.AsQueryable);
             IEnumerable<Product> remaining = Enumerable.Empty<Product>();
-            this.productRepo.Setup(repo => repo.Remove(It.IsAny<int>())).Callback<int>(ogArg => remaining = this.productList.Where(prod => prod.ProductID != ogArg));
+            this.productRepo.Setup(repo => repo.Remove(It.IsAny<int>())).Callback<int>(ogArg => remaining = this.productList.Where(prod => prod.Id != ogArg));
             Product prodToRemove = this.productList[DataSource.Rnd.Next(1, this.productList.Count)];
 
-            this.adminLogic.RemoveProduct(prodToRemove.ProductID);
+            this.adminLogic.RemoveProduct(prodToRemove.Id);
 
             Assert.That(remaining, Does.Not.Contain(prodToRemove));
-            this.productRepo.Verify(repo => repo.Remove(prodToRemove.ProductID), Times.Once);
+            this.productRepo.Verify(repo => repo.Remove(prodToRemove.Id), Times.Once);
             this.productRepo.Verify(repo => repo.Remove(It.IsAny<int>()), Times.Once);
             this.productRepo.Verify(repo => repo.GetAll(), Times.Never);
         }
@@ -93,15 +93,15 @@ namespace EisaAwards.Test
         public void TestChangeEGName()
         {
             ExpertGroup oldEG = this.egList.ElementAt(DataSource.Rnd.Next(1, this.egList.Count));
-            ExpertGroup newEG = new ExpertGroup();
-            this.egRepo.Setup(repo => repo.ChangeName(It.IsAny<int>(), It.IsAny<string>())).Callback<int, string>((id, name) => newEG = new ExpertGroup { ExpertGroupID = id, Name = name });
+            ExpertGroup newEG = new ();
+            this.egRepo.Setup(repo => repo.ChangeName(It.IsAny<int>(), It.IsAny<string>())).Callback<int, string>((id, name) => newEG = new ExpertGroup { Id = id, Name = name });
 
             string newName = "Something else";
-            this.adminLogic.ChangeEGName(oldEG.ExpertGroupID, newName);
+            this.adminLogic.ChangeEGName(oldEG.Id, newName);
 
-            Assert.That(newEG.ExpertGroupID, Is.EqualTo(oldEG.ExpertGroupID));
+            Assert.That(newEG.Id, Is.EqualTo(oldEG.Id));
             Assert.That(newEG.Name, Is.EqualTo(newName));
-            this.egRepo.Verify(repo => repo.ChangeName(oldEG.ExpertGroupID, newName), Times.Once);
+            this.egRepo.Verify(repo => repo.ChangeName(oldEG.Id, newName), Times.Once);
             this.egRepo.Verify(repo => repo.ChangeName(It.IsAny<int>(), It.IsAny<string>()), Times.Once);
         }
 

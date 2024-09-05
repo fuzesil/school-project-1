@@ -18,13 +18,9 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is MemberCountry other)
-            {
-                return this.Country.Equals(other.Country)
-                    && this.Member.Equals(other.Member);
-            }
-
-            return false;
+            return obj is MemberCountry other
+                && this.Country.Equals(other.Country)
+                && this.Member.Equals(other.Member);
         }
 
         /// <inheritdoc/>

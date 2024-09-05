@@ -1,6 +1,5 @@
 ﻿namespace EisaAwards.Logic
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using EisaAwards.Repository;
@@ -39,6 +38,19 @@
             this.products = products;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AdminLogic"/> class.
+        /// </summary>
+        /// <param name="dbContext">The instance of the session to the database.</param>
+        public AdminLogic(ref Microsoft.EntityFrameworkCore.DbContext dbContext)
+        {
+            this.brands = new BrandRepository(ref dbContext);
+            this.countries = new CountryRepository(ref dbContext);
+            this.expertgroups = new ExpertGroupRepository(ref dbContext);
+            this.members = new MemberRepository(ref dbContext);
+            this.products = new ProductRepository(ref dbContext);
+        }
+
         /*
         /// <summary>
         /// Return an instance of the class if it isn't already instantiated.
@@ -69,8 +81,8 @@
         public IEnumerable<MemberBrand> ListBrandsAndMembersAtSameAdress()
         {
             var q = from brand in this.brands.GetAll()
-                    join country in this.countries.GetAll() on brand.CountryID equals country.CountryID
-                    join member in this.members.GetAll() on country.CountryID equals member.CountryID
+                    join country in this.countries.GetAll() on brand.CountryID equals country.Id
+                    join member in this.members.GetAll() on country.Id equals member.CountryID
                     where brand.CountryID == member.CountryID && (brand.Address.Contains(member.OfficeLocation) || member.OfficeLocation.Contains(brand.Address))
                     select new MemberBrand { Brand = brand, Member = member };
             return q.ToList();
@@ -92,10 +104,10 @@
         /// <inheritdoc/>
         public void InsertBrand(string name, string country, string address, string homepage)
         {
-            Data.Brand newbrand = new Data.Brand
+            Data.Brand newbrand = new ()
             {
                 Name = name,
-                CountryID = this.countries.GetOne(country).CountryID,
+                CountryID = this.countries.GetOne(country).Id,
                 Address = address,
                 Homepage = homepage,
             };
@@ -105,7 +117,7 @@
         /// <inheritdoc/>
         public void InsertCountry(string name, string capital, int callingcode, int ppp)
         {
-            Data.Country newcountry = new Data.Country
+            Data.Country newcountry = new ()
             {
                 Name = name,
                 CapitalCity = capital,
@@ -118,7 +130,7 @@
         /// <inheritdoc/>
         public void InsertEG(string name)
         {
-            Data.ExpertGroup newEG = new Data.ExpertGroup
+            Data.ExpertGroup newEG = new ()
             {
                 Name = name,
             };
@@ -128,11 +140,11 @@
         /// <inheritdoc/>
         public void InsertMember(string name, string website, string publisher, string editor, string phone, string country, string office, string expertgroup)
         {
-            Data.Member newmember = new Data.Member
+            Data.Member newmember = new ()
             {
                 ChiefEditor = editor,
-                CountryID = this.countries.GetOne(country).CountryID,
-                ExpertGroupID = this.expertgroups.GetOne(expertgroup).ExpertGroupID,
+                CountryID = this.countries.GetOne(country).Id,
+                ExpertGroupID = this.expertgroups.GetOne(expertgroup).Id,
                 Name = name,
                 OfficeLocation = office,
                 PhoneNumber = phone,
@@ -145,14 +157,14 @@
         /// <inheritdoc/>
         public void InsertProduct(string name, string brandName, int price, int estLifetime, System.DateTime launch, string expGrp, string award)
         {
-            Data.Product newproduct = new Data.Product()
+            Data.Product newproduct = new ()
             {
                 Name = name,
-                BrandId = this.brands.GetOne(brandName).BrandId,
+                BrandId = this.brands.GetOne(brandName).Id,
                 EstimatedLifetime = estLifetime,
                 Price = price,
                 LaunchDate = launch,
-                ExpertGroupID = this.expertgroups.GetOne(expGrp).ExpertGroupID,
+                ExpertGroupID = this.expertgroups.GetOne(expGrp).Id,
                 Category = award,
             };
             this.products.Insert(newproduct);

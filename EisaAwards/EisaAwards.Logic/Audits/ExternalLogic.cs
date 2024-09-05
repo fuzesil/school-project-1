@@ -28,6 +28,17 @@
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="ExternalLogic"/> class.
+        /// </summary>
+        /// <param name="dbContext">The instance of the session to the database.</param>
+        protected ExternalLogic(ref Microsoft.EntityFrameworkCore.DbContext dbContext)
+        {
+            this.Brands = new BrandRepository(ref dbContext);
+            this.Expertgroups = new ExpertGroupRepository(ref dbContext);
+            this.Products = new ProductRepository(ref dbContext);
+        }
+
+        /// <summary>
         /// Gets or Sets the value of 'N'.
         /// </summary>
         public int TopN { get; set; }

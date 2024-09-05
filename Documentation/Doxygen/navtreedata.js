@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "EISA Awards Reporting & Auditing", "index.html", [
+  [ "EISA Awards Audit", "index.html", [
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -48,8 +48,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_admin_logic_8cs_source.html",
-"class_eisa_awards_1_1_logic_1_1_brand_with_awards.html#a8ae8c61a63a2104e59c50bd3ea0ee208",
-"hierarchy.html"
+"class_eisa_awards_1_1_logic_1_1_external_logic.html#a7b8024b2791b8d7669cef34e9f5465ba",
+"interface_eisa_awards_1_1_repository_1_1_i_brand_repository.html#ac3a9aa0891218280ef0993b6a53f69b2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

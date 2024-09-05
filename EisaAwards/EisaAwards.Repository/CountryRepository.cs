@@ -9,16 +9,16 @@
     /// </summary>
     public class CountryRepository : RepositoryClass<Country>, ICountryRepository
     {
-        private readonly DbContext db;
+        // private readonly DbContext db;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CountryRepository"/> class.
         /// </summary>
-        /// <param name="db">The <see cref="DbContext"/> parametre.</param>
-        public CountryRepository(DbContext db)
-            : base(db)
+        /// <param name="dbContext">The instance of type <see cref="DbContext"/> that represents the connection to the database.</param>
+        public CountryRepository(ref DbContext dbContext)
+            : base(ref dbContext)
         {
-            this.db = db ?? throw new System.ArgumentNullException(nameof(db));
+            // this.db = db ?? throw new System.ArgumentNullException(nameof(db));
         }
 
         /// <inheritdoc/>
@@ -54,13 +54,13 @@
         /// <inheritdoc/>
         public override Country GetOne(int id)
         {
-            return this.GetAll().Single(country => country.CountryID == id);
+            return this.GetAll().Single(country => country.Id == id);
         }
 
         /// <inheritdoc/>
         public override Country GetOne(string name)
         {
-            return this.GetAll().Where(country => country.Name == name).First();
+            return this.GetAll().First(country => country.Name.Contains(name));
         }
 
         /// <inheritdoc/>

@@ -1,6 +1,6 @@
 var class_eisa_awards_1_1_repository_1_1_brand_repository =
 [
-    [ "BrandRepository", "class_eisa_awards_1_1_repository_1_1_brand_repository.html#a53815033155a91edf6f47ee95bbf253b", null ],
+    [ "BrandRepository", "class_eisa_awards_1_1_repository_1_1_brand_repository.html#a5f3e6d927c77ef4f2b3eabbc7e08cfdc", null ],
     [ "ChangeHomePage", "class_eisa_awards_1_1_repository_1_1_brand_repository.html#a71e5cb3dff98da2bfd6e91c2c55f206b", null ],
     [ "ChangeName", "class_eisa_awards_1_1_repository_1_1_brand_repository.html#ad3d9fb01bd973c97b4d8c779fb87d4d1", null ],
     [ "GetOne", "class_eisa_awards_1_1_repository_1_1_brand_repository.html#af66890aae83264f4d66cf0e97f81cd26", null ],
