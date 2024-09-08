@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['delete_0',['Delete',['../class_q_k_n_w_z1___h_f_t__2021221_1_1_console_client_1_1_rest_service.html#a873265c699ccbdd970b4d0abcfeb72eb',1,'QKNWZ1_HFT_2021221.ConsoleClient.RestService.Delete()'],['../interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html#afaa0230c2585a60b69e1b99dd7f40cb5',1,'QKNWZ1_HFT_2021221.Repository.IRepository.Delete(int id)'],['../interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html#ae610be4f02fadcc6eb024f3561305627',1,'QKNWZ1_HFT_2021221.Repository.IRepository.Delete(T item)'],['../class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html#abc798898bea713eafa3f8faf16629616',1,'QKNWZ1_HFT_2021221.Repository.RepositoryBase.Delete(T item)'],['../class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html#abeb39809619883aeebe4555322969078',1,'QKNWZ1_HFT_2021221.Repository.RepositoryBase.Delete(int id)']]]
+];

@@ -1,91 +1,152 @@
 var hierarchy =
 [
-    [ "EisaAwards.AdminRunner", "class_eisa_awards_1_1_admin_runner.html", null ],
-    [ "EisaAwards.Test.AdminTesting", "class_eisa_awards_1_1_test_1_1_admin_testing.html", null ],
-    [ "EisaAwards.AuditWorker", "class_eisa_awards_1_1_audit_worker.html", null ],
-    [ "EisaAwards.Data.Brand", "class_eisa_awards_1_1_data_1_1_brand.html", null ],
-    [ "EisaAwards.Logic.BrandAndNumber", "class_eisa_awards_1_1_logic_1_1_brand_and_number.html", null ],
-    [ "EisaAwards.Logic.BrandWithAwards", "class_eisa_awards_1_1_logic_1_1_brand_with_awards.html", null ],
-    [ "EisaAwards.ConsoleUserInput", "class_eisa_awards_1_1_console_user_input.html", null ],
-    [ "EisaAwards.Data.Country", "class_eisa_awards_1_1_data_1_1_country.html", null ],
-    [ "EisaAwards.CustomExtension", "class_eisa_awards_1_1_custom_extension.html", null ],
-    [ "EisaAwards.Data.DataSeeder", "class_eisa_awards_1_1_data_1_1_data_seeder.html", null ],
-    [ "EisaAwards.Test.DataSource", "class_eisa_awards_1_1_test_1_1_data_source.html", null ],
+    [ "QKNWZ1_HFT_2021221.Test.AdminLogicTests", "class_q_k_n_w_z1___h_f_t__2021221_1_1_test_1_1_admin_logic_tests.html", null ],
+    [ "Application", null, [
+      [ "WpfClient.App", "class_wpf_client_1_1_app.html", null ]
+    ] ],
+    [ "System.Windows.Application", null, [
+      [ "WpfClient.App", "class_wpf_client_1_1_app.html", null ],
+      [ "WpfClient.App", "class_wpf_client_1_1_app.html", null ]
+    ] ],
+    [ "System.Attribute", null, [
+      [ "QKNWZ1_HFT_2021221.Models.StringableAttribute", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_stringable_attribute.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.ConsoleClient.ConsoleHelper", "class_q_k_n_w_z1___h_f_t__2021221_1_1_console_client_1_1_console_helper.html", null ],
+    [ "QKNWZ1_HFT_2021221.ConsoleClient.ConsoleRunner", "class_q_k_n_w_z1___h_f_t__2021221_1_1_console_client_1_1_console_runner.html", null ],
+    [ "ControllerBase", null, [
+      [ "QKNWZ1_HFT_2021221.Endpoint.Controllers.AdminController", "class_q_k_n_w_z1___h_f_t__2021221_1_1_endpoint_1_1_controllers_1_1_admin_controller.html", null ],
+      [ "QKNWZ1_HFT_2021221.Endpoint.Controllers.ExternalController", "class_q_k_n_w_z1___h_f_t__2021221_1_1_endpoint_1_1_controllers_1_1_external_controller.html", null ],
+      [ "QKNWZ1_HFT_2021221.Endpoint.Controllers.InternalController", "class_q_k_n_w_z1___h_f_t__2021221_1_1_endpoint_1_1_controllers_1_1_internal_controller.html", null ]
+    ] ],
     [ "DbContext", null, [
-      [ "EisaAwards.Data.EisaAwardsDbContext", "class_eisa_awards_1_1_data_1_1_eisa_awards_db_context.html", null ]
+      [ "QKNWZ1_HFT_2021221.Data.EisaDbContext", "class_q_k_n_w_z1___h_f_t__2021221_1_1_data_1_1_eisa_db_context.html", null ]
     ] ],
-    [ "EisaAwards.Data.ExpertGroup", "class_eisa_awards_1_1_data_1_1_expert_group.html", null ],
-    [ "EisaAwards.Logic.ExpertgroupMemberCountry", "class_eisa_awards_1_1_logic_1_1_expertgroup_member_country.html", null ],
-    [ "EisaAwards.Logic.ExpertgroupProduct", "class_eisa_awards_1_1_logic_1_1_expertgroup_product.html", null ],
-    [ "EisaAwards.Test.ExternalTesting", "class_eisa_awards_1_1_test_1_1_external_testing.html", null ],
-    [ "EisaAwards.Logic.IAdministrator", "interface_eisa_awards_1_1_logic_1_1_i_administrator.html", [
-      [ "EisaAwards.Logic.AdminLogic", "class_eisa_awards_1_1_logic_1_1_admin_logic.html", null ]
+    [ "System.Exception", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.RestExceptionInfo", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_rest_exception_info.html", null ]
     ] ],
-    [ "EisaAwards.Test.InternalTesting", "class_eisa_awards_1_1_test_1_1_internal_testing.html", null ],
-    [ "EisaAwards.Logic.IReadCommonData", "interface_eisa_awards_1_1_logic_1_1_i_read_common_data.html", [
-      [ "EisaAwards.Logic.ExternalLogic", "class_eisa_awards_1_1_logic_1_1_external_logic.html", [
-        [ "EisaAwards.Logic.ExternalAuditLogic", "class_eisa_awards_1_1_logic_1_1_external_audit_logic.html", null ]
+    [ "QKNWZ1_HFT_2021221.Test.ExternalLogicTests", "class_q_k_n_w_z1___h_f_t__2021221_1_1_test_1_1_external_logic_tests.html", null ],
+    [ "Hub", null, [
+      [ "QKNWZ1_HFT_2021221.Endpoint.SignalRHub", "class_q_k_n_w_z1___h_f_t__2021221_1_1_endpoint_1_1_signal_r_hub.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Logic.IAdministrator", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_i_administrator.html", [
+      [ "QKNWZ1_HFT_2021221.Logic.AdminLogic", "class_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_admin_logic.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Repository.IChangeManager", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_change_manager.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.RepositoryBase< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Logic.ICommonLogic", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_i_common_logic.html", [
+      [ "QKNWZ1_HFT_2021221.Logic.IExternalLogic", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_i_external_logic.html", [
+        [ "QKNWZ1_HFT_2021221.Logic.ExternalAuditLogic", "class_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_external_audit_logic.html", null ]
       ] ],
-      [ "EisaAwards.Logic.InternalLogic", "class_eisa_awards_1_1_logic_1_1_internal_logic.html", [
-        [ "EisaAwards.Logic.InternalAuditLogic", "class_eisa_awards_1_1_logic_1_1_internal_audit_logic.html", null ]
+      [ "QKNWZ1_HFT_2021221.Logic.IInternalLogic", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_i_internal_logic.html", [
+        [ "QKNWZ1_HFT_2021221.Logic.InternalAuditLogic", "class_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_internal_audit_logic.html", null ]
       ] ]
     ] ],
-    [ "EisaAwards.Logic.IReadExternalData", "interface_eisa_awards_1_1_logic_1_1_i_read_external_data.html", [
-      [ "EisaAwards.Logic.ExternalLogic", "class_eisa_awards_1_1_logic_1_1_external_logic.html", null ]
+    [ "System.Windows.Markup.IComponentConnector", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.NonCrudWindow", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_non_crud_window.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.NonCrudWindow", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_non_crud_window.html", null ],
+      [ "WpfClient.MainWindow", "class_wpf_client_1_1_main_window.html", null ],
+      [ "WpfClient.MainWindow", "class_wpf_client_1_1_main_window.html", null ]
     ] ],
-    [ "EisaAwards.Logic.IReadInternalData", "interface_eisa_awards_1_1_logic_1_1_i_read_internal_data.html", [
-      [ "EisaAwards.Logic.InternalLogic", "class_eisa_awards_1_1_logic_1_1_internal_logic.html", null ]
+    [ "IDisposable", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.ImmutableRestCollection< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_immutable_rest_collection.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.RestCollection< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_rest_collection.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.RestService", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_rest_service.html", null ]
     ] ],
-    [ "IRepository", null, [
-      [ "EisaAwards.Repository.IRepository< T >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-        [ "EisaAwards.Repository.RepositoryClass< T >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", null ]
+    [ "IEnumerable", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.ImmutableRestCollection< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_immutable_rest_collection.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.RestCollection< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_rest_collection.html", null ]
+    ] ],
+    [ "System.IEquatable", null, [
+      [ "QKNWZ1_HFT_2021221.Models.Brand", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_brand.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.BrandAndNumber", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_brand_and_number.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.BrandWithAwards", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_brand_with_awards.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.Country", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_country.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.ExpertGroup", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_expert_group.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.ExpertgroupMemberCountry", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_expertgroup_member_country.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.ExpertgroupProduct", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_expertgroup_product.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.Member", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_member.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.MemberBrand", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_member_brand.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.MemberCountry", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_member_country.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.NumberAndId", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_number_and_id.html", null ],
+      [ "QKNWZ1_HFT_2021221.Models.Product", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_product.html", null ]
+    ] ],
+    [ "INotifyCollectionChanged", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.ImmutableRestCollection< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_immutable_rest_collection.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.RestCollection< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_rest_collection.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Test.InternalLogicTesting", "class_q_k_n_w_z1___h_f_t__2021221_1_1_test_1_1_internal_logic_testing.html", null ],
+    [ "System.Windows.Markup.InternalTypeHelper", null, [
+      [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Repository.IRepository< T >", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.RepositoryBase< T >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Repository.IRepository< Brand >", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.IBrandRepository", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_brand_repository.html", [
+        [ "QKNWZ1_HFT_2021221.Repository.BrandRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_brand_repository.html", null ]
       ] ]
     ] ],
-    [ "EisaAwards.Repository.IRepository< Data.Brand >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-      [ "EisaAwards.Repository.IBrandRepository", "interface_eisa_awards_1_1_repository_1_1_i_brand_repository.html", [
-        [ "EisaAwards.Repository.BrandRepository", "class_eisa_awards_1_1_repository_1_1_brand_repository.html", null ]
+    [ "QKNWZ1_HFT_2021221.Repository.IRepository< Country >", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.ICountryRepository", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_country_repository.html", [
+        [ "QKNWZ1_HFT_2021221.Repository.CountryRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_country_repository.html", null ]
       ] ]
     ] ],
-    [ "EisaAwards.Repository.IRepository< Data.Country >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-      [ "EisaAwards.Repository.ICountryRepository", "interface_eisa_awards_1_1_repository_1_1_i_country_repository.html", [
-        [ "EisaAwards.Repository.CountryRepository", "class_eisa_awards_1_1_repository_1_1_country_repository.html", null ]
+    [ "QKNWZ1_HFT_2021221.Repository.IRepository< ExpertGroup >", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.IExpertGroupRepository", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_expert_group_repository.html", [
+        [ "QKNWZ1_HFT_2021221.Repository.ExpertGroupRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_expert_group_repository.html", null ]
       ] ]
     ] ],
-    [ "EisaAwards.Repository.IRepository< Data.ExpertGroup >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-      [ "EisaAwards.Repository.IExpertGroupRepository", "interface_eisa_awards_1_1_repository_1_1_i_expert_group_repository.html", [
-        [ "EisaAwards.Repository.ExpertGroupRepository", "class_eisa_awards_1_1_repository_1_1_expert_group_repository.html", null ]
+    [ "QKNWZ1_HFT_2021221.Repository.IRepository< Member >", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.IMemberRepository", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_member_repository.html", [
+        [ "QKNWZ1_HFT_2021221.Repository.MemberRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_member_repository.html", null ]
       ] ]
     ] ],
-    [ "EisaAwards.Repository.IRepository< Member >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-      [ "EisaAwards.Repository.IMemberRepository", "interface_eisa_awards_1_1_repository_1_1_i_member_repository.html", [
-        [ "EisaAwards.Repository.MemberRepository", "class_eisa_awards_1_1_repository_1_1_member_repository.html", null ]
+    [ "QKNWZ1_HFT_2021221.Repository.IRepository< Product >", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_repository.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.IProductRepository", "interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_product_repository.html", [
+        [ "QKNWZ1_HFT_2021221.Repository.ProductRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_product_repository.html", null ]
       ] ]
     ] ],
-    [ "EisaAwards.Repository.IRepository< Product >", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", [
-      [ "EisaAwards.Repository.IProductRepository", "interface_eisa_awards_1_1_repository_1_1_i_product_repository.html", [
-        [ "EisaAwards.Repository.ProductRepository", "class_eisa_awards_1_1_repository_1_1_product_repository.html", null ]
-      ] ]
+    [ "QKNWZ1_HFT_2021221.WpfClient.NotifyService", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_notify_service.html", null ],
+    [ "ObservableObject", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.VM.NonCrudViewModel", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_v_m_1_1_non_crud_view_model.html", null ]
     ] ],
-    [ "EisaAwards.Data.Member", "class_eisa_awards_1_1_data_1_1_member.html", null ],
-    [ "EisaAwards.Logic.MemberBrand", "class_eisa_awards_1_1_logic_1_1_member_brand.html", null ],
-    [ "EisaAwards.Logic.MemberCountry", "class_eisa_awards_1_1_logic_1_1_member_country.html", null ],
-    [ "EisaAwards.Logic.NumberAndId", "class_eisa_awards_1_1_logic_1_1_number_and_id.html", null ],
-    [ "EisaAwards.Logic.OverviewLogic", "class_eisa_awards_1_1_logic_1_1_overview_logic.html", null ],
-    [ "EisaAwards.Data.Product", "class_eisa_awards_1_1_data_1_1_product.html", null ],
-    [ "EisaAwards.Program", "class_eisa_awards_1_1_program.html", null ],
-    [ "EisaAwards.Repository.RepositoryClass< Brand >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", [
-      [ "EisaAwards.Repository.BrandRepository", "class_eisa_awards_1_1_repository_1_1_brand_repository.html", null ]
+    [ "ObservableRecipient", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.VM.AdministratorViewModel", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_v_m_1_1_administrator_view_model.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.VM.ExternalViewModel", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_v_m_1_1_external_view_model.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.VM.InternalViewModel", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_v_m_1_1_internal_view_model.html", null ]
     ] ],
-    [ "EisaAwards.Repository.RepositoryClass< Country >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", [
-      [ "EisaAwards.Repository.CountryRepository", "class_eisa_awards_1_1_repository_1_1_country_repository.html", null ]
+    [ "QKNWZ1_HFT_2021221.ConsoleClient.Program", "class_q_k_n_w_z1___h_f_t__2021221_1_1_console_client_1_1_program.html", null ],
+    [ "QKNWZ1_HFT_2021221.Endpoint.Program", "class_q_k_n_w_z1___h_f_t__2021221_1_1_endpoint_1_1_program.html", null ],
+    [ "QKNWZ1_HFT_2021221.JavascriptClient.Program", "class_q_k_n_w_z1___h_f_t__2021221_1_1_javascript_client_1_1_program.html", null ],
+    [ "QKNWZ1_HFT_2021221.Repository.RepositoryBase< Brand >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.BrandRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_brand_repository.html", null ]
     ] ],
-    [ "EisaAwards.Repository.RepositoryClass< ExpertGroup >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", [
-      [ "EisaAwards.Repository.ExpertGroupRepository", "class_eisa_awards_1_1_repository_1_1_expert_group_repository.html", null ]
+    [ "QKNWZ1_HFT_2021221.Repository.RepositoryBase< Country >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.CountryRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_country_repository.html", null ]
     ] ],
-    [ "EisaAwards.Repository.RepositoryClass< Member >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", [
-      [ "EisaAwards.Repository.MemberRepository", "class_eisa_awards_1_1_repository_1_1_member_repository.html", null ]
+    [ "QKNWZ1_HFT_2021221.Repository.RepositoryBase< ExpertGroup >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.ExpertGroupRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_expert_group_repository.html", null ]
     ] ],
-    [ "EisaAwards.Repository.RepositoryClass< Product >", "class_eisa_awards_1_1_repository_1_1_repository_class.html", [
-      [ "EisaAwards.Repository.ProductRepository", "class_eisa_awards_1_1_repository_1_1_product_repository.html", null ]
-    ] ]
+    [ "QKNWZ1_HFT_2021221.Repository.RepositoryBase< Member >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.MemberRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_member_repository.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Repository.RepositoryBase< Product >", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_repository_base.html", [
+      [ "QKNWZ1_HFT_2021221.Repository.ProductRepository", "class_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_product_repository.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.ConsoleClient.RestService", "class_q_k_n_w_z1___h_f_t__2021221_1_1_console_client_1_1_rest_service.html", null ],
+    [ "QKNWZ1_HFT_2021221.Endpoint.Startup", "class_q_k_n_w_z1___h_f_t__2021221_1_1_endpoint_1_1_startup.html", null ],
+    [ "QKNWZ1_HFT_2021221.JavascriptClient.Startup", "class_q_k_n_w_z1___h_f_t__2021221_1_1_javascript_client_1_1_startup.html", null ],
+    [ "QKNWZ1_HFT_2021221.Test.TestDataSource", "class_q_k_n_w_z1___h_f_t__2021221_1_1_test_1_1_test_data_source.html", null ],
+    [ "System.Windows.Window", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.NonCrudWindow", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_non_crud_window.html", null ],
+      [ "QKNWZ1_HFT_2021221.WpfClient.NonCrudWindow", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_non_crud_window.html", null ],
+      [ "WpfClient.MainWindow", "class_wpf_client_1_1_main_window.html", null ],
+      [ "WpfClient.MainWindow", "class_wpf_client_1_1_main_window.html", null ],
+      [ "WpfClient.MainWindow", "class_wpf_client_1_1_main_window.html", null ]
+    ] ],
+    [ "Window", null, [
+      [ "QKNWZ1_HFT_2021221.WpfClient.NonCrudWindow", "class_q_k_n_w_z1___h_f_t__2021221_1_1_wpf_client_1_1_non_crud_window.html", null ]
+    ] ],
+    [ "QKNWZ1_HFT_2021221.Models.XtensionClass", "class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_xtension_class.html", null ]
 ];

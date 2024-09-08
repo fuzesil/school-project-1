@@ -24,9 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "EISA Awards Audit", "index.html", [
+  [ "EISA Awards Auditor Assistant", "index.html", [
     [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -35,7 +35,6 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ],
@@ -47,9 +46,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_admin_logic_8cs_source.html",
-"class_eisa_awards_1_1_logic_1_1_external_logic.html#a7b8024b2791b8d7669cef34e9f5465ba",
-"interface_eisa_awards_1_1_repository_1_1_i_brand_repository.html#ac3a9aa0891218280ef0993b6a53f69b2"
+"_admin_controller_8cs_source.html",
+"class_q_k_n_w_z1___h_f_t__2021221_1_1_logic_1_1_admin_logic.html#a7ba6f4110af81ab26fda251f7f8e6c14",
+"class_q_k_n_w_z1___h_f_t__2021221_1_1_models_1_1_member.html#a6dcded69aba3e35b62b3581d96cb7072",
+"class_q_k_n_w_z1___h_f_t__2021221_1_1_test_1_1_test_data_source.html#ab0024cd16afe78becaf79ff9869d7743",
+"interface_q_k_n_w_z1___h_f_t__2021221_1_1_repository_1_1_i_country_repository.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
