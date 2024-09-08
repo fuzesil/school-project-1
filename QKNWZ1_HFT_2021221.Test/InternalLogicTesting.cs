@@ -72,13 +72,13 @@ namespace QKNWZ1_HFT_2021221.Test
 
 			if (id > 0)
 			{
-				Assert.AreEqual(resultById, this.countryList.SingleOrDefault(cntry => cntry.Id == id));
+				Assert.That(resultById, Is.EqualTo(this.countryList.SingleOrDefault(cntry => cntry.Id == id)));
 				this.countryRepo.Verify(repo => repo.Read(id), Times.Once);
 				this.countryRepo.Verify(repo => repo.Read(It.IsAny<int>()), Times.Once);
 			}
 			else if (!string.IsNullOrWhiteSpace(name))
 			{
-				Assert.AreEqual(resultByName, this.countryList.FirstOrDefault(cntry => cntry.Name.Contains(name)));
+				Assert.That(resultByName, Is.EqualTo(this.countryList.FirstOrDefault(cntry => cntry.Name.Contains(name))));
 				this.countryRepo.Verify(repo => repo.Read(name), Times.Once);
 				this.countryRepo.Verify(repo => repo.Read(It.IsAny<string>()), Times.Once);
 			}

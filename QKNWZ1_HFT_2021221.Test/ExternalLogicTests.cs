@@ -97,9 +97,9 @@ namespace QKNWZ1_HFT_2021221.Test
 			var resultBrandById = this.externalLogic.GetOneBrand(id);
 			var resultBrandByName = this.externalLogic.GetOneBrand(name);
 
-			Assert.AreEqual(resultBrandById, this.brandList.SingleOrDefault(brand => brand.Id == id));
-			Assert.AreEqual(resultBrandByName, this.brandList.FirstOrDefault(brandItem => brandItem.Name == name));
-			Assert.AreEqual(resultBrandById, resultBrandByName);
+			Assert.That(resultBrandById, Is.EqualTo(this.brandList.SingleOrDefault(brand => brand.Id == id)));
+			Assert.That(resultBrandByName, Is.EqualTo(this.brandList.FirstOrDefault(brandItem => brandItem.Name == name)));
+			Assert.That(resultBrandById, Is.EqualTo(resultBrandByName));
 
 			this.brandRepo.Verify(repo => repo.Read(id), Times.Once);
 			this.brandRepo.Verify(repo => repo.Read(It.IsAny<int>()), Times.Once);
@@ -134,9 +134,9 @@ namespace QKNWZ1_HFT_2021221.Test
 			var resultEGById = this.externalLogic.GetOneExpertGroup(id);
 			var resultEGByName = this.externalLogic.GetOneExpertGroup(name);
 
-			Assert.AreEqual(resultEGById, this.egList.SingleOrDefault(eg => eg.Id == id));
-			Assert.AreEqual(resultEGByName, this.egList.FirstOrDefault(eg => eg.Name == name));
-			Assert.AreEqual(resultEGById, resultEGByName);
+			Assert.That(resultEGById, Is.EqualTo(this.egList.SingleOrDefault(eg => eg.Id == id)));
+			Assert.That(resultEGByName, Is.EqualTo(this.egList.FirstOrDefault(eg => eg.Name == name)));
+			Assert.That(resultEGById, Is.EqualTo(resultEGByName));
 
 			this.egRepo.Verify(repo => repo.Read(id), Times.Once);
 			this.egRepo.Verify(repo => repo.Read(It.IsAny<int>()), Times.Once);
@@ -172,9 +172,9 @@ namespace QKNWZ1_HFT_2021221.Test
 			var resultProductById = this.externalLogic.GetOneProduct(id);
 			var resultProductByName = this.externalLogic.GetOneProduct(name);
 
-			Assert.AreEqual(resultProductById, this.productList.SingleOrDefault(prod => prod.Id == id));
-			Assert.AreEqual(resultProductByName, this.productList.FirstOrDefault(prod => prod.Name == name));
-			Assert.AreEqual(resultProductById, resultProductByName);
+			Assert.That(resultProductById, Is.EqualTo(this.productList.SingleOrDefault(prod => prod.Id == id)));
+			Assert.That(resultProductByName, Is.EqualTo(this.productList.FirstOrDefault(prod => prod.Name == name)));
+			Assert.That(resultProductById, Is.EqualTo(resultProductByName));
 
 			this.productRepo.Verify(repo => repo.Read(id), Times.Once);
 			this.productRepo.Verify(repo => repo.Read(It.IsAny<int>()), Times.Once);
@@ -203,7 +203,7 @@ namespace QKNWZ1_HFT_2021221.Test
 			System.InvalidOperationException invalidOpEx = Assert.Throws<System.InvalidOperationException>(() => this.externalLogic.ReadProduct(index));
 			var msg = "Neither the ID nor the Name was valid.";
 			System.Exception ex = Assert.Catch<System.InvalidOperationException>(() => this.externalLogic.GetOneProduct(id));
-			Assert.AreEqual(msg, ex.Message);
+			Assert.That(msg, Is.EqualTo(ex.Message));
 			Assert.Throws<System.InvalidOperationException>(() => this.externalLogic.GetOneBrand(id), msg);
 			Assert.Throws(Is.TypeOf<System.InvalidOperationException>().And.Message.EqualTo(msg), () => this.externalLogic.GetOneExpertGroup(id));
 
