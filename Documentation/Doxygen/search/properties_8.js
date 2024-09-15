@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['member_0',['Member',['../class_eisa_awards_1_1_logic_1_1_expertgroup_member_country.html#adf4702a6194af6dd920da5a540e0caa2',1,'EisaAwards.Logic.ExpertgroupMemberCountry.Member'],['../class_eisa_awards_1_1_logic_1_1_member_brand.html#afeea0d175a402ef798695c0aaef59640',1,'EisaAwards.Logic.MemberBrand.Member'],['../class_eisa_awards_1_1_logic_1_1_member_country.html#aaa639e145ce40f4cabb499cbba19d615',1,'EisaAwards.Logic.MemberCountry.Member']]],
-  ['members_1',['Members',['../class_eisa_awards_1_1_data_1_1_data_seeder.html#afc717398185d6acbb0e53f7fc4eacc79',1,'EisaAwards.Data.DataSeeder.Members'],['../class_eisa_awards_1_1_data_1_1_eisa_awards_db_context.html#af56d452af29a19db5f7405e37b49f5bb',1,'EisaAwards.Data.EisaAwardsDbContext.Members'],['../class_eisa_awards_1_1_data_1_1_country.html#a7d52c0df4c540dc868032a72e6aca3a6',1,'EisaAwards.Data.Country.Members'],['../class_eisa_awards_1_1_data_1_1_expert_group.html#af37a0e17a5bb28aecc7cb181a24cf97b',1,'EisaAwards.Data.ExpertGroup.Members'],['../class_eisa_awards_1_1_logic_1_1_internal_logic.html#ac2b2e4d0568d87fc34310a9aeb5ebacd',1,'EisaAwards.Logic.InternalLogic.Members']]]
-];

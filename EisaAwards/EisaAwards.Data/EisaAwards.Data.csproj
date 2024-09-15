@@ -60,4 +60,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EisaAwards.Models\EisaAwards.Models.csproj" />
+  </ItemGroup>
+
 </Project>
