@@ -7,7 +7,7 @@ var class_eisa_awards_1_1_data_1_1_country =
     [ "Brands", "class_eisa_awards_1_1_data_1_1_country.html#a441c77060d3da2d5a1fc1bf6514d6c38", null ],
     [ "CallingCode", "class_eisa_awards_1_1_data_1_1_country.html#a674b7c77db6eb88d6ad824357b98d70d", null ],
     [ "CapitalCity", "class_eisa_awards_1_1_data_1_1_country.html#ae361a603d33e8e6ac6cfcc4dee35d071", null ],
-    [ "CountryID", "class_eisa_awards_1_1_data_1_1_country.html#a4636b4e207da6eaa58096ecb9d08ce84", null ],
+    [ "Id", "class_eisa_awards_1_1_data_1_1_country.html#a7e92c6343e93f8c195e4916bcb78a0be", null ],
     [ "Members", "class_eisa_awards_1_1_data_1_1_country.html#a7d52c0df4c540dc868032a72e6aca3a6", null ],
     [ "Name", "class_eisa_awards_1_1_data_1_1_country.html#afc6b7e7385aaa2943603ccffd138e49c", null ],
     [ "PPPperCapita", "class_eisa_awards_1_1_data_1_1_country.html#a011bc4471ea4288aa0ea5177cecd9a79", null ]

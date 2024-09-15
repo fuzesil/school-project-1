@@ -9,16 +9,16 @@
     /// </summary>
     public class ExpertGroupRepository : RepositoryClass<ExpertGroup>, IExpertGroupRepository
     {
-        private readonly DbContext db;
+        // private readonly DbContext db;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpertGroupRepository"/> class.
         /// </summary>
-        /// <param name="db">The <see cref="DbContext"/> parametre.</param>
-        public ExpertGroupRepository(DbContext db)
-            : base(db)
+        /// <param name="dbContext">The instance of type <see cref="DbContext"/> that represents the connection to the database.</param>
+        public ExpertGroupRepository(ref DbContext dbContext)
+            : base(ref dbContext)
         {
-            this.db = db ?? throw new System.ArgumentNullException(nameof(db));
+            // this.db = db ?? throw new System.ArgumentNullException(nameof(db));
         }
 
         /// <inheritdoc/>
@@ -32,13 +32,13 @@
         /// <inheritdoc/>
         public override ExpertGroup GetOne(int id)
         {
-            return this.GetAll().Single(expertgroup => expertgroup.ExpertGroupID == id);
+            return this.GetAll().Single(expertgroup => expertgroup.Id == id);
         }
 
         /// <inheritdoc/>
         public override ExpertGroup GetOne(string name)
         {
-            return this.GetAll().Where(eg => eg.Name == name).First();
+            return this.GetAll().First(eg => eg.Name.Contains(name));
         }
 
         /// <inheritdoc/>

@@ -24,9 +24,11 @@
 */
 var NAVTREE =
 [
-  [ "EISA Awards Reporting & Auditing", "index.html", [
+  [ "EISA Awards Auditor Assistant", "index.html", [
+    [ "The MIT License (MIT)", "md__c_1_2_users_2_laszlo_2source_2repos_2fuzesil_2school-project-1_2_eisa_awards_2_eisa_awards_8c354131739bdc8e5a8ca619ed957d444.html", null ],
+    [ "EISA Awards README", "md__c_1_2_users_2_laszlo_2source_2repos_2fuzesil_2school-project-1_2_r_e_a_d_m_e.html", null ],
     [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -47,9 +49,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_admin_logic_8cs_source.html",
-"class_eisa_awards_1_1_logic_1_1_brand_with_awards.html#a8ae8c61a63a2104e59c50bd3ea0ee208",
-"hierarchy.html"
+"___layout_8cshtml_8g_8cs_source.html",
+"class_eisa_awards_1_1_data_1_1_country.html#afc6b7e7385aaa2943603ccffd138e49c",
+"class_eisa_awards_1_1_logic_1_1_external_logic.html#aca5add840dc86d6b0f6578db0a3b755e",
+"class_eisa_awards_1_1_test_1_1_internal_testing.html#a3140463641c6a8bceb993c2891d2adf3",
+"namespace_eisa_awards_1_1_web_app_1_1_controllers.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

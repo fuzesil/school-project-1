@@ -18,13 +18,9 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is BrandAndNumber other)
-            {
-                return this.Number == other.Number
-                    && this.Brand.Equals(other.Brand);
-            }
-
-            return false;
+            return obj is BrandAndNumber other
+                && this.Number == other.Number
+                && this.Brand.Equals(other.Brand);
         }
 
         /// <inheritdoc/>

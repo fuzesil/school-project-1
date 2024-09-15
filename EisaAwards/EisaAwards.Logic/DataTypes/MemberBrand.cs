@@ -18,13 +18,9 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is MemberBrand other)
-            {
-                return this.Brand.Equals(other.Brand)
-                    && this.Member.Equals(other.Member);
-            }
-
-            return false;
+            return obj is MemberBrand other
+                && this.Brand.Equals(other.Brand)
+                && this.Member.Equals(other.Member);
         }
 
         /// <inheritdoc/>

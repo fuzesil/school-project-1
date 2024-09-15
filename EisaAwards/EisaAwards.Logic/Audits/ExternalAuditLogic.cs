@@ -25,6 +25,15 @@
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExternalAuditLogic"/> class.
+        /// </summary>
+        /// <param name="dbContext">The instance of the session to the database.</param>
+        public ExternalAuditLogic(ref Microsoft.EntityFrameworkCore.DbContext dbContext)
+            : base(ref dbContext)
+        {
+        }
+
         /*
         /// <summary>
         /// Creates an instance of <see cref="ExternalAuditLogic"/>.
@@ -73,14 +82,14 @@
         /// <inheritdoc/>
         public override IEnumerable<BrandWithAwards> GetProductsByBrandId(out int count)
         {
-            List<BrandWithAwards> output = new List<BrandWithAwards>();
+            List<BrandWithAwards> output = new ();
             foreach (BrandAndNumber brand_count in this.GetBrandsAndAwardCounts())
             {
                 output.Add(new BrandWithAwards
                 {
                     AwardCount = brand_count.Number,
                     Brand = brand_count.Brand,
-                    WinningProducts = this.Products.GetAll().Where(product => product.BrandId == brand_count.Brand.BrandId),
+                    WinningProducts = this.Products.GetAll().Where(product => product.BrandId == brand_count.Brand.Id),
                 });
             }
 
@@ -95,7 +104,7 @@
                     group product by product.ExpertGroupID into prodGrp
                     let egIdWithMaxPrice = new { ExpertGroupID = prodGrp.Key, MaxPrice = prodGrp.Max(product => product.Price) }
                     join product in this.Products.GetAll() on egIdWithMaxPrice.MaxPrice equals product.Price
-                    join expertgroup in this.Expertgroups.GetAll() on egIdWithMaxPrice.ExpertGroupID equals expertgroup.ExpertGroupID
+                    join expertgroup in this.Expertgroups.GetAll() on egIdWithMaxPrice.ExpertGroupID equals expertgroup.Id
                     select new ExpertgroupProduct { ExpertGroup = expertgroup, Product = product };
             return q.ToList();
             /*
@@ -143,7 +152,7 @@
                     group product by product.BrandId into prodGrp
                     let prodCount = prodGrp.Count()
                     where topBrandCounts.Contains(prodCount)
-                    join brand in this.Brands.GetAll() on prodGrp.Key equals brand.BrandId
+                    join brand in this.Brands.GetAll() on prodGrp.Key equals brand.Id
                     select new BrandAndNumber { Brand = brand, Number = prodCount };
             return q.ToList();
             /*

@@ -9,16 +9,16 @@
     /// </summary>
     public class ProductRepository : RepositoryClass<Product>, IProductRepository
     {
-        private readonly DbContext db;
+        // private readonly DbContext db;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductRepository"/> class.
         /// </summary>
-        /// <param name="db">The <see cref="DbContext"/> parametre.</param>
-        public ProductRepository(DbContext db)
-            : base(db)
+        /// <param name="dbContext">The instance of type <see cref="DbContext"/> that represents the connection to the database.</param>
+        public ProductRepository(ref DbContext dbContext)
+            : base(ref dbContext)
         {
-            this.db = db ?? throw new System.ArgumentNullException(nameof(db));
+            // this.db = db ?? throw new System.ArgumentNullException(nameof(db));
         }
 
         /// <inheritdoc/>
@@ -32,13 +32,13 @@
         /// <inheritdoc/>
         public override Product GetOne(int id)
         {
-            return this.GetAll().Single(product => product.ProductID == id);
+            return this.GetAll().Single(product => product.Id == id);
         }
 
         /// <inheritdoc/>
         public override Product GetOne(string name)
         {
-            return this.GetAll().First(product => product.Name == name);
+            return this.GetAll().First(product => product.Name.Contains(name));
         }
 
         /// <inheritdoc/>

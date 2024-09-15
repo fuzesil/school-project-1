@@ -23,14 +23,10 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is ExpertgroupMemberCountry other)
-            {
-                return this.Country.Equals(other.Country)
-                    && this.Expertgroup.Equals(other.Expertgroup)
-                    && this.Member.Equals(other.Member);
-            }
-
-            return false;
+            return obj is ExpertgroupMemberCountry other
+                && this.Country.Equals(other.Country)
+                && this.Expertgroup.Equals(other.Expertgroup)
+                && this.Member.Equals(other.Member);
         }
 
         /// <inheritdoc/>

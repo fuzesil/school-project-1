@@ -27,6 +27,17 @@
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="InternalLogic"/> class.
+        /// </summary>
+        /// <param name="dbContext">The instance of the session to the database.</param>
+        protected InternalLogic(ref Microsoft.EntityFrameworkCore.DbContext dbContext)
+        {
+            this.Countries = new CountryRepository(ref dbContext);
+            this.Expertgroups = new ExpertGroupRepository(ref dbContext);
+            this.Members = new MemberRepository(ref dbContext);
+        }
+
+        /// <summary>
         /// Gets or Sets the value of 'N'.
         /// </summary>
         public int TopN { get; set; }
