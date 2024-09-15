@@ -24,6 +24,15 @@
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InternalAuditLogic"/> class.
+        /// </summary>
+        /// <param name="dbContext">The instance of the session to the database.</param>
+        public InternalAuditLogic(ref Microsoft.EntityFrameworkCore.DbContext dbContext)
+            : base(ref dbContext)
+        {
+        }
+
         /*
         /// <summary>
         /// Sets the properties for <see cref="InternalAuditLogic"/>.
@@ -70,7 +79,7 @@
         public override IEnumerable<MemberCountry> ListMembersInCapitalCity(bool isContained)
         {
             var q = from member in this.Members.GetAll()
-                    join country in this.Countries.GetAll() on member.CountryID equals country.CountryID
+                    join country in this.Countries.GetAll() on member.CountryID equals country.Id
                     where isContained ? member.OfficeLocation.Contains(country.CapitalCity) : !member.OfficeLocation.Contains(country.CapitalCity)
                     select new MemberCountry { Member = member, Country = country };
             /*
@@ -107,13 +116,13 @@
         public override IEnumerable<ExpertgroupMemberCountry> GetRichestMemberInExpertGroup()
         {
             var q = from country in this.Countries.GetAll()
-                    join member in this.Members.GetAll() on country.CountryID equals member.CountryID
+                    join member in this.Members.GetAll() on country.Id equals member.CountryID
                     let cm = new { country, member }
                     group cm by cm.member.ExpertGroupID into cmGrp
                     join country in this.Countries.GetAll() on cmGrp.Max(cm => cm.country.PPPperCapita) equals country.PPPperCapita
-                    join member in this.Members.GetAll() on country.CountryID equals member.CountryID
+                    join member in this.Members.GetAll() on country.Id equals member.CountryID
                     where member.ExpertGroupID == cmGrp.Key
-                    join expertgroup in this.Expertgroups.GetAll() on member.ExpertGroupID equals expertgroup.ExpertGroupID
+                    join expertgroup in this.Expertgroups.GetAll() on member.ExpertGroupID equals expertgroup.Id
                     select new ExpertgroupMemberCountry { Expertgroup = expertgroup, Member = member, Country = country };
             return q.ToList();
             /*

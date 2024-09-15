@@ -1,7 +1,7 @@
 ﻿namespace EisaAwards.Data
 {
     /// <summary>
-    /// Entity that represents the Expert Groups table.
+    /// Entity that represents the EXPERT_GROUPS table.
     /// </summary>
     public class ExpertGroup
     {
@@ -17,7 +17,7 @@
         /// <summary>
         /// Gets or Sets the primary key for the <see cref="ExpertGroup"/> entity.
         /// </summary>
-        public int ExpertGroupID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or Sets the name field for the <see cref="ExpertGroup"/> entity.
@@ -37,28 +37,21 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is ExpertGroup other)
-            {
-                return this.ExpertGroupID == other.ExpertGroupID
-                    && ((this.Name is null && other.Name is null) || this.Name == other.Name);
-            }
-
-            return false;
+            return obj is ExpertGroup other
+                && this.Id == other.Id
+                && ((this.Name is null && other.Name is null) || this.Name == other.Name);
         }
 
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return this.ExpertGroupID;
+            return this.Id;
         }
 
-        /// <summary>
-        /// Returns a custom string of the properties of the current <see cref="ExpertGroup"/> object.
-        /// </summary>
-        /// <returns>The custom string that represents the current object.</returns>
+        /// <inheritdoc/>
         public override string ToString()
         {
-            return $"( #{this.ExpertGroupID} " + (this.Name ?? $"NO {nameof(this.Name)}!") + " )";
+            return $"( #{this.Id} " + (this.Name ?? $"NO {nameof(this.Name)}!") + " )";
         }
     }
 }

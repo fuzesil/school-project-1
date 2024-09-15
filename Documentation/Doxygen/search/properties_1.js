@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['brand_0',['Brand',['../class_eisa_awards_1_1_data_1_1_product.html#a0537fbeee46ff68fddf8af037666f9e4',1,'EisaAwards.Data.Product.Brand'],['../class_eisa_awards_1_1_logic_1_1_brand_and_number.html#a4b19cc9bb381043b7e45772bf78fdba1',1,'EisaAwards.Logic.BrandAndNumber.Brand'],['../class_eisa_awards_1_1_logic_1_1_brand_with_awards.html#a8ae8c61a63a2104e59c50bd3ea0ee208',1,'EisaAwards.Logic.BrandWithAwards.Brand'],['../class_eisa_awards_1_1_logic_1_1_member_brand.html#a68187a10aeebcf7b7fa6e8af8b2821c1',1,'EisaAwards.Logic.MemberBrand.Brand']]],
+  ['brandid_1',['BrandId',['../class_eisa_awards_1_1_data_1_1_product.html#a5fb34cbb19d5c1566e7c5263db2204cd',1,'EisaAwards::Data::Product']]],
+  ['brands_2',['Brands',['../class_eisa_awards_1_1_data_1_1_data_seeder.html#a99f0efd7508f4dfe58f6aaaa644994f6',1,'EisaAwards.Data.DataSeeder.Brands'],['../class_eisa_awards_1_1_data_1_1_eisa_awards_db_context.html#a4ebcf6fe089d30355312c9f693fb5425',1,'EisaAwards.Data.EisaAwardsDbContext.Brands'],['../class_eisa_awards_1_1_data_1_1_country.html#a441c77060d3da2d5a1fc1bf6514d6c38',1,'EisaAwards.Data.Country.Brands'],['../class_eisa_awards_1_1_logic_1_1_external_logic.html#af7cebc11e1ec76e52d4098719c07c13e',1,'EisaAwards.Logic.ExternalLogic.Brands']]]
+];

@@ -10,7 +10,7 @@
     /// </summary>
     public static class DataSeeder
     {
-        private static readonly Random Rnd = new Random();
+        private static readonly Random Rnd = new ();
 
         /// <summary>
         /// Gets a sequence of records from the provided CSV file.
@@ -22,16 +22,16 @@
                 int counter = 0;
                 string line = string.Empty;
                 string[] fields;
-                using StreamReader sr = new StreamReader(@"DataSeed\Brand.csv");
+                using StreamReader sr = new (@"DataSeed\Brand.csv");
                 while ((line = sr.ReadLine()) != null)
                 {
                     fields = line.Split(';');
                     yield return new Brand
                     {
-                        BrandId = ++counter,
+                        Id = ++counter,
                         Name = fields[0],
                         Address = fields[1],
-                        CountryID = Countries.FirstOrDefault(cntry => cntry.Name.Equals(fields[2], StringComparison.OrdinalIgnoreCase)).CountryID,
+                        CountryID = Countries.FirstOrDefault(cntry => cntry.Name.Equals(fields[2], StringComparison.OrdinalIgnoreCase)).Id,
                         Homepage = fields[3],
                     };
                 }
@@ -48,13 +48,13 @@
                 int counter = 0;
                 string line = string.Empty;
                 string[] fields;
-                using StreamReader sr = new StreamReader(@"DataSeed\Country.csv");
+                using StreamReader sr = new (@"DataSeed\Country.csv");
                 while ((line = sr.ReadLine()) != null)
                 {
                     fields = line.Split(';');
                     yield return new Country
                     {
-                        CountryID = ++counter,
+                        Id = ++counter,
                         Name = fields[0],
                         CapitalCity = fields[1],
                         CallingCode = ((Func<int>)(() => string.IsNullOrWhiteSpace(fields[2]) ? 0 : int.Parse(fields[2], System.Globalization.NumberFormatInfo.InvariantInfo)))(),
@@ -74,13 +74,13 @@
                 int counter = 0;
                 string line;
                 string[] fields;
-                using StreamReader sr = new StreamReader(@"DataSeed\ExpertGroup.csv");
+                using StreamReader sr = new (@"DataSeed\ExpertGroup.csv");
                 while ((line = sr.ReadLine()) != null)
                 {
                     fields = line.Split(';');
                     yield return new ExpertGroup
                     {
-                        ExpertGroupID = ++counter,
+                        Id = ++counter,
                         Name = fields[0],
                     };
                 }
@@ -97,17 +97,17 @@
                 int counter = 0;
                 string line = string.Empty;
                 string[] fields;
-                using StreamReader sr = new StreamReader(@"DataSeed\Member.csv");
+                using StreamReader sr = new (@"DataSeed\Member.csv");
                 while ((line = sr.ReadLine()) != null)
                 {
                     fields = line.Split(';');
                     yield return new Member
                     {
-                        MemberID = ++counter,
-                        ExpertGroupID = ExpertGroups.First(eg => eg.Name.Equals(fields[0], StringComparison.OrdinalIgnoreCase)).ExpertGroupID,
+                        Id = ++counter,
+                        ExpertGroupID = ExpertGroups.First(eg => eg.Name.Equals(fields[0], StringComparison.OrdinalIgnoreCase)).Id,
                         Name = fields[1],
                         OfficeLocation = fields[3],
-                        CountryID = Countries.First(country => country.Name.Equals(fields[2], StringComparison.OrdinalIgnoreCase)).CountryID,
+                        CountryID = Countries.First(country => country.Name.Equals(fields[2], StringComparison.OrdinalIgnoreCase)).Id,
                         ChiefEditor = fields[4],
                         Publisher = fields[5],
                         PhoneNumber = fields[6],
@@ -128,15 +128,15 @@
                 Brand newbrand = null;
                 string line = string.Empty;
                 string[] fields;
-                using StreamReader sr = new StreamReader(@"DataSeed\Product.csv");
+                using StreamReader sr = new (@"DataSeed\Product.csv");
                 while ((line = sr.ReadLine()) != null)
                 {
                     fields = line.Split(';');
                     newbrand = Brands.FirstOrDefault(manu => manu.Name.Equals(fields[1], StringComparison.OrdinalIgnoreCase));
                     yield return new Product
                     {
-                        ProductID = ++counter,
-                        BrandId = newbrand.BrandId,
+                        Id = ++counter,
+                        BrandId = newbrand.Id,
                         Name = fields[2],
                         ExpertGroupID = int.Parse(fields[3], System.Globalization.NumberFormatInfo.InvariantInfo),
                         Category = fields[4],

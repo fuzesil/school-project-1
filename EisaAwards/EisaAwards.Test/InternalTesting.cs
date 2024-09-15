@@ -48,17 +48,17 @@
         [TestCase(int.MaxValue / 2)]
         public void TestGetOneReturnsValidOrNull(int id)
         {
-            this.countryRepo.Setup(repo => repo.GetOne(id)).Returns<int>(idArg => this.countryList.SingleOrDefault(cntry => cntry.CountryID == idArg));
-            this.egRepo.Setup(repo => repo.GetOne(id)).Returns<int>(idArg => this.egList.SingleOrDefault(eg => eg.ExpertGroupID == idArg));
-            this.memberRepo.Setup(repo => repo.GetOne(id)).Returns<int>(idArg => this.memberList.SingleOrDefault(mmbr => mmbr.MemberID == idArg));
+            this.countryRepo.Setup(repo => repo.GetOne(id)).Returns<int>(idArg => this.countryList.SingleOrDefault(cntry => cntry.Id == idArg));
+            this.egRepo.Setup(repo => repo.GetOne(id)).Returns<int>(idArg => this.egList.SingleOrDefault(eg => eg.Id == idArg));
+            this.memberRepo.Setup(repo => repo.GetOne(id)).Returns<int>(idArg => this.memberList.SingleOrDefault(mmbr => mmbr.Id == idArg));
 
             Country resultCountry = this.internalLogic.GetOneCountry(id);
             Member resultMember = this.internalLogic.GetOneMember(id);
             ExpertGroup resultEG = this.internalLogic.GetOneExpertGroup(id);
 
-            Assert.AreEqual(resultEG, this.egList.SingleOrDefault(eg => eg.ExpertGroupID == id));
-            Assert.AreEqual(resultCountry, this.countryList.SingleOrDefault(cntry => cntry.CountryID == id));
-            Assert.AreEqual(resultMember, this.memberList.SingleOrDefault(mmbr => mmbr.MemberID == id));
+            Assert.AreEqual(resultEG, this.egList.SingleOrDefault(eg => eg.Id == id));
+            Assert.AreEqual(resultCountry, this.countryList.SingleOrDefault(cntry => cntry.Id == id));
+            Assert.AreEqual(resultMember, this.memberList.SingleOrDefault(mmbr => mmbr.Id == id));
             this.countryRepo.Verify(repo => repo.GetOne(id), Times.Once);
             this.countryRepo.Verify(repo => repo.GetOne(It.IsAny<int>()), Times.Once);
             this.countryRepo.Verify(repo => repo.GetAll(), Times.Never);

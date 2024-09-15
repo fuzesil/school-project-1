@@ -9,16 +9,24 @@
     /// </summary>
     public class MemberRepository : RepositoryClass<Member>, IMemberRepository
     {
-        private readonly DbContext db;
+        // private readonly DbContext db;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MemberRepository"/> class.
         /// </summary>
-        /// <param name="db">The <see cref="DbContext"/> parametre.</param>
-        public MemberRepository(DbContext db)
-            : base(db)
+        /// <param name="dbContext">The instance of type <see cref="DbContext"/> that represents the connection to the database.</param>
+        public MemberRepository(ref DbContext dbContext)
+            : base(ref dbContext)
         {
-            this.db = db ?? throw new System.ArgumentNullException(nameof(db));
+            // this.db = db ?? throw new System.ArgumentNullException(nameof(db));
+        }
+
+        /// <inheritdoc/>
+        public void ChangeChiefEditor(int id, string newChiefEditor)
+        {
+            Member thisMember = this.GetOne(id);
+            thisMember.ChiefEditor = newChiefEditor;
+            this.Update(thisMember);
         }
 
         /// <inheritdoc/>
@@ -27,6 +35,50 @@
             Member thisMember = this.GetOne(id);
             thisMember.Name = newName;
             this.Update(thisMember);
+        }
+
+        /// <inheritdoc/>
+        public void ChangeOfficeLocation(int id, string newOfficeLocation)
+        {
+            Member thisMember = this.GetOne(id);
+            thisMember.OfficeLocation = newOfficeLocation;
+            this.Update(thisMember);
+        }
+
+        /// <inheritdoc/>
+        public void ChangePhoneNumber(int id, string newPhoneNumber)
+        {
+            Member thisMember = this.GetOne(id);
+            thisMember.PhoneNumber = newPhoneNumber;
+            this.Update(thisMember);
+        }
+
+        /// <inheritdoc/>
+        public void ChangePublisher(int id, string newPublisher)
+        {
+            Member thisMember = this.GetOne(id);
+            thisMember.Publisher = newPublisher;
+            this.Update(thisMember);
+        }
+
+        /// <inheritdoc/>
+        public void ChangeWebsite(int id, string newWebsite)
+        {
+            Member thisMember = this.GetOne(id);
+            thisMember.Website = newWebsite;
+            this.Update(thisMember);
+        }
+
+        /// <inheritdoc/>
+        public override Member GetOne(int id)
+        {
+            return this.GetAll().Single(member => member.Id == id);
+        }
+
+        /// <inheritdoc/>
+        public override Member GetOne(string name)
+        {
+            return this.GetAll().First(member => member.Name.Contains(name));
         }
 
         /// <inheritdoc/>
@@ -40,18 +92,6 @@
 
             thisMember.OfficeLocation = newLocation;
             this.Update(thisMember);
-        }
-
-        /// <inheritdoc/>
-        public override Member GetOne(int id)
-        {
-            return this.GetAll().Single(member => member.MemberID == id);
-        }
-
-        /// <inheritdoc/>
-        public override Member GetOne(string name)
-        {
-            return this.GetAll().Where(member => member.Name == name).First();
         }
 
         /// <inheritdoc/>

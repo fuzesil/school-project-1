@@ -1,6 +1,7 @@
 var class_eisa_awards_1_1_logic_1_1_admin_logic =
 [
     [ "AdminLogic", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#aef65658b1a307f2ea2c1217a17992d8c", null ],
+    [ "AdminLogic", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#af0d092b50ccafc20ab15adf7f1dd0dad", null ],
     [ "ChangeBrandHomePage", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#aa8ee5f655a284c8ba1eb7afcbc315d5a", null ],
     [ "ChangeCountryPPP", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a04ccb0e26713881c1f309915f3e5f64b", null ],
     [ "ChangeEGName", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a3e50bce6edf74b740a9d241a5a7887c1", null ],
@@ -11,8 +12,8 @@ var class_eisa_awards_1_1_logic_1_1_admin_logic =
     [ "InsertEG", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#abe22303dfbba1413ecb50d85de2ebb09", null ],
     [ "InsertMember", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a7b1b9b6ecd6c445497e2df7854d1dcb0", null ],
     [ "InsertProduct", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a933de009bded92fbce2ca4c37bb903f0", null ],
-    [ "ListBrandsAndMembersAtSameAdress", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a342402e3fc0e211189228d2d32157499", null ],
-    [ "ListBrandsAndMembersAtSameAdressAsync", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a3294192f80bd90cce1c988a8a82540bf", null ],
+    [ "ListBrandsAndMembersAtSameAdress", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a03c22a20b0be96fbe31afbb173e3c4ac", null ],
+    [ "ListBrandsAndMembersAtSameAdressAsync", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a7c994fca5672bc0415aa22fe1dd4344a", null ],
     [ "RemoveBrand", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#a7a4a25fa7c5f83c04dfca3624e82c81b", null ],
     [ "RemoveCountry", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#aef0804479042d41cca835acaf3f748f0", null ],
     [ "RemoveEG", "class_eisa_awards_1_1_logic_1_1_admin_logic.html#aa618b8158301acc753b4608b3884830f", null ],

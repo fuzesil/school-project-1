@@ -26,14 +26,10 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is BrandWithAwards other)
-            {
-                return this.AwardCount == other.AwardCount
-                    && this.Brand.Equals(other.Brand)
-                    && this.IsSameWinningProducts(other);
-            }
-
-            return false;
+            return obj is BrandWithAwards other
+                && this.AwardCount == other.AwardCount
+                && this.Brand.Equals(other.Brand)
+                && this.IsSameWinningProducts(other);
         }
 
         /// <inheritdoc/>

@@ -18,13 +18,9 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is ExpertgroupProduct other)
-            {
-                return this.ExpertGroup.Equals(other.ExpertGroup)
-                    && this.Product.Equals(other.Product);
-            }
-
-            return false;
+            return obj is ExpertgroupProduct other
+                && this.ExpertGroup.Equals(other.ExpertGroup)
+                && this.Product.Equals(other.Product);
         }
 
         /// <inheritdoc/>

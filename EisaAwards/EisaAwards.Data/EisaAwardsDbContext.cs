@@ -74,13 +74,13 @@ namespace EisaAwards.Data
 
             modelBuilder.Entity<ExpertGroup>(entity =>
             {
-                entity.HasKey(expertgroup => expertgroup.ExpertGroupID);
+                entity.HasKey(expertgroup => expertgroup.Id);
                 entity.Property(expertgroup => expertgroup.Name).HasMaxLength(64).IsRequired();
             });
 
             modelBuilder.Entity<Member>(entity =>
             {
-                entity.HasKey(member => member.MemberID);
+                entity.HasKey(member => member.Id);
                 entity.Property(member => member.Name).HasMaxLength(64).IsRequired();
                 entity.Property(member => member.Website).HasMaxLength(128).IsRequired();
                 entity.Property(member => member.OfficeLocation).HasMaxLength(256).IsRequired();
@@ -101,7 +101,7 @@ namespace EisaAwards.Data
 
             modelBuilder.Entity<Country>(entity =>
             {
-                entity.HasKey(country => country.CountryID);
+                entity.HasKey(country => country.Id);
                 entity.Property(country => country.Name).HasMaxLength(32).IsRequired();
                 entity.Property(country => country.CapitalCity).HasMaxLength(32).IsRequired();
                 entity.Property(country => country.CallingCode).IsRequired();
@@ -110,7 +110,7 @@ namespace EisaAwards.Data
 
             modelBuilder.Entity<Brand>(entity =>
             {
-                entity.HasKey(manufacturer => manufacturer.BrandId);
+                entity.HasKey(manufacturer => manufacturer.Id);
                 entity.Property(manufacturer => manufacturer.Name).HasMaxLength(32).IsRequired();
                 entity.Property(manufacturer => manufacturer.Address).HasMaxLength(128);
                 entity.Property(manufacturer => manufacturer.Homepage).HasMaxLength(64).IsRequired();
@@ -123,7 +123,7 @@ namespace EisaAwards.Data
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.HasKey(product => product.ProductID);
+                entity.HasKey(product => product.Id);
                 entity.Property(product => product.Name).HasMaxLength(64).IsRequired();
                 entity.Property(product => product.Price).IsRequired();
                 entity.Property(product => product.Category).HasMaxLength(128).IsRequired();

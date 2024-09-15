@@ -8,7 +8,7 @@ var namespace_eisa_awards_1_1_repository =
     [ "IExpertGroupRepository", "interface_eisa_awards_1_1_repository_1_1_i_expert_group_repository.html", "interface_eisa_awards_1_1_repository_1_1_i_expert_group_repository" ],
     [ "IMemberRepository", "interface_eisa_awards_1_1_repository_1_1_i_member_repository.html", "interface_eisa_awards_1_1_repository_1_1_i_member_repository" ],
     [ "IProductRepository", "interface_eisa_awards_1_1_repository_1_1_i_product_repository.html", "interface_eisa_awards_1_1_repository_1_1_i_product_repository" ],
-    [ "IRepository", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", null ],
+    [ "IRepository", "interface_eisa_awards_1_1_repository_1_1_i_repository.html", "interface_eisa_awards_1_1_repository_1_1_i_repository" ],
     [ "MemberRepository", "class_eisa_awards_1_1_repository_1_1_member_repository.html", "class_eisa_awards_1_1_repository_1_1_member_repository" ],
     [ "ProductRepository", "class_eisa_awards_1_1_repository_1_1_product_repository.html", "class_eisa_awards_1_1_repository_1_1_product_repository" ],
     [ "RepositoryClass", "class_eisa_awards_1_1_repository_1_1_repository_class.html", "class_eisa_awards_1_1_repository_1_1_repository_class" ]

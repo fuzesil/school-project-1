@@ -1,7 +1,7 @@
 ﻿namespace EisaAwards.Data
 {
     /// <summary>
-    /// The entity class representing the Manufacturers table.
+    /// The entity class representing the BRANDS table.
     /// </summary>
     public class Brand
     {
@@ -16,7 +16,7 @@
         /// <summary>
         /// Gets or Sets the primary key for the <see cref="Brand"/> entity.
         /// </summary>
-        public int BrandId { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or Sets the name field for the <see cref="Brand"/> entity.
@@ -51,31 +51,24 @@
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
-            if (obj is Brand other)
-            {
-                return this.BrandId == other.BrandId
-                    && this.CountryID == other.CountryID
-                    && ((this.Homepage is null && other.Homepage is null) || this.Homepage == other.Homepage)
-                    && ((this.Address is null && other.Address is null) || this.Address == other.Address)
-                    && ((this.Name is null && other.Name is null) || this.Name == other.Name);
-            }
-
-            return false;
+            return obj is Brand other
+                && this.Id == other.Id
+                && this.CountryID == other.CountryID
+                && ((this.Homepage is null && other.Homepage is null) || this.Homepage == other.Homepage)
+                && ((this.Address is null && other.Address is null) || this.Address == other.Address)
+                && ((this.Name is null && other.Name is null) || this.Name == other.Name);
         }
 
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return this.BrandId;
+            return this.Id;
         }
 
-        /// <summary>
-        /// Returns a custom string of the properties of the current <see cref="Brand"/> object.
-        /// </summary>
-        /// <returns>The custom string that represents the current object.</returns>
+        /// <inheritdoc/>
         public override string ToString()
         {
-            return $"( #{this.BrandId} " + (this.Name ?? $"NO {nameof(this.Name)}!") + " | "
+            return $"( #{this.Id} " + (this.Name ?? $"NO {nameof(this.Name)}!") + " | "
                 + (this.Homepage ?? $"NO {nameof(this.Homepage)}!") + " | "
                 + (this.Address ?? $"NO {nameof(this.Address)}!") + ", "
                 + (this.Country?.Name?.ToUpperInvariant() ?? $" #{this.CountryID} )");
